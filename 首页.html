@@ -1,0 +1,320 @@
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script src="https://unpkg.com/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"></script>
+  <style>* {font-family: Noto Sans SC;}</style>
+</head>
+<body>
+  <div class="bg-white min-h-screen relative pb-16">
+  <!-- 顶部搜索区 -->
+  <div class="fixed top-0 left-0 right-0 bg-white z-10 px-4 py-3 flex items-center justify-between shadow-sm">
+    <img class="h-8 w-auto" alt="Travel Wisdom Assistant logo with yellow accent" data-size="120*40" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914384154.jpg">
+    <div class="flex-1 mx-3 relative">
+      <input type="text" placeholder="搜索目的地/攻略/酒店" class="w-full py-2 px-4 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400">
+      <i class="fa-solid fa-magnifying-glass absolute right-4 top-2.5 text-gray-400"></i>
+    </div>
+    <button class="relative">
+      <i class="fa-solid fa-bell text-gray-600 text-xl"></i>
+      <span class="absolute -top-1 -right-1 bg-red-500 rounded-full w-4 h-4 flex items-center justify-center text-white text-xs">3</span>
+    </button>
+  </div>
+
+  <!-- 主体内容区 -->
+  <div class="pt-16">
+    <!-- 热门标签滚动条 -->
+    <div class="px-4 py-3 overflow-x-auto flex gap-2 no-scrollbar">
+      <span class="bg-[#FFB800] text-white px-4 py-1.5 rounded-full text-sm whitespace-nowrap">热门景点</span>
+      <span class="bg-[#FFB800] text-white px-4 py-1.5 rounded-full text-sm whitespace-nowrap">美食探索</span>
+      <span class="bg-[#FFB800] text-white px-4 py-1.5 rounded-full text-sm whitespace-nowrap">文化体验</span>
+      <span class="bg-[#FFB800] text-white px-4 py-1.5 rounded-full text-sm whitespace-nowrap">自然风光</span>
+      <span class="bg-[#FFB800] text-white px-4 py-1.5 rounded-full text-sm whitespace-nowrap">历史古迹</span>
+      <span class="bg-[#FFB800] text-white px-4 py-1.5 rounded-full text-sm whitespace-nowrap">海岛度假</span>
+    </div>
+
+    <!-- 区域选择栏 -->
+    <div class="px-4 border-b">
+      <div class="flex justify-between">
+        <div class="relative pb-3 px-2">
+          <span class="font-bold text-black">国内</span>
+          <div class="absolute bottom-0 left-0 right-0 h-1 bg-[#FFB800] rounded-t-sm"></div>
+        </div>
+        <div class="pb-3 px-2">
+          <span class="text-gray-500">亚洲</span>
+        </div>
+        <div class="pb-3 px-2">
+          <span class="text-gray-500">欧洲</span>
+        </div>
+        <div class="pb-3 px-2">
+          <span class="text-gray-500">美洲</span>
+        </div>
+        <div class="pb-3 px-2">
+          <span class="text-gray-500">大洋洲</span>
+        </div>
+        <div class="pb-3 px-2">
+          <span class="text-gray-500">非洲</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 热门城市推荐 -->
+    <div class="px-4 py-4">
+      <div class="flex justify-between items-center mb-3">
+        <h2 class="text-lg font-bold">热门城市</h2>
+        <a href="#" class="text-sm text-gray-500">查看全部</a>
+      </div>
+      <div class="grid grid-cols-3 gap-3">
+        <div class="rounded-lg overflow-hidden shadow-sm">
+          <div class="relative">
+            <img class="w-full h-24 object-cover" alt="Shanghai skyline with Oriental Pearl Tower at sunset" data-size="120*80" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383122.jpg">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+              <p class="text-white text-sm font-medium">上海</p>
+              <div class="flex items-center">
+                <i class="fa-solid fa-star text-[#FFB800] text-xs"></i>
+                <span class="text-white text-xs ml-1">4.8</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-sm">
+          <div class="relative">
+            <img class="w-full h-24 object-cover" alt="Beijing Forbidden City with traditional Chinese architecture" data-size="120*80" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383565.jpg">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+              <p class="text-white text-sm font-medium">北京</p>
+              <div class="flex items-center">
+                <i class="fa-solid fa-star text-[#FFB800] text-xs"></i>
+                <span class="text-white text-xs ml-1">4.9</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-sm">
+          <div class="relative">
+            <img class="w-full h-24 object-cover" alt="Chengdu panda reserve with bamboo forest" data-size="120*80" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383121.jpg">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+              <p class="text-white text-sm font-medium">成都</p>
+              <div class="flex items-center">
+                <i class="fa-solid fa-star text-[#FFB800] text-xs"></i>
+                <span class="text-white text-xs ml-1">4.7</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-sm">
+          <div class="relative">
+            <img class="w-full h-24 object-cover" alt="Guangzhou Canton Tower illuminated at night with river view" data-size="120*80" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383111.jpg">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+              <p class="text-white text-sm font-medium">广州</p>
+              <div class="flex items-center">
+                <i class="fa-solid fa-star text-[#FFB800] text-xs"></i>
+                <span class="text-white text-xs ml-1">4.6</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-sm">
+          <div class="relative">
+            <img class="w-full h-24 object-cover" alt="Xiamen Gulangyu Island with colonial buildings and beach" data-size="120*80" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914384193.jpg">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+              <p class="text-white text-sm font-medium">厦门</p>
+              <div class="flex items-center">
+                <i class="fa-solid fa-star text-[#FFB800] text-xs"></i>
+                <span class="text-white text-xs ml-1">4.7</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-sm">
+          <div class="relative">
+            <img class="w-full h-24 object-cover" alt="Hangzhou West Lake with traditional pavilion and willow trees" data-size="120*80" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383121.jpg">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+              <p class="text-white text-sm font-medium">杭州</p>
+              <div class="flex items-center">
+                <i class="fa-solid fa-star text-[#FFB800] text-xs"></i>
+                <span class="text-white text-xs ml-1">4.8</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 当季推荐 -->
+    <div class="px-4 py-4">
+      <h2 class="text-lg font-bold mb-3">当季推荐</h2>
+      <div class="overflow-x-auto flex gap-4 no-scrollbar pb-2">
+        <div class="rounded-lg overflow-hidden shadow-sm min-w-[280px] relative">
+          <img class="w-full h-40 object-cover" alt="Jiuzhaigou colorful lakes and autumn foliage in mountains" data-size="280*160" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383602.jpg">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+            <h3 class="text-white font-bold">九寨沟</h3>
+            <p class="text-white text-sm">五彩斑斓的湖泊与秋季红叶</p>
+            <div class="flex items-center mt-1">
+              <i class="fa-regular fa-calendar text-[#FFB800] text-xs"></i>
+              <span class="text-white text-xs ml-1">最佳游玩：9-11月</span>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-sm min-w-[280px] relative">
+          <img class="w-full h-40 object-cover" alt="Yunnan rice terraces with golden sunset light and mist" data-size="280*160" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914384239.jpg">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+            <h3 class="text-white font-bold">云南梯田</h3>
+            <p class="text-white text-sm">金色梯田与壮丽山景</p>
+            <div class="flex items-center mt-1">
+              <i class="fa-regular fa-calendar text-[#FFB800] text-xs"></i>
+              <span class="text-white text-xs ml-1">最佳游玩：9-10月</span>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-sm min-w-[280px] relative">
+          <img class="w-full h-40 object-cover" alt="Inner Mongolia grasslands with yurts and horses at sunset" data-size="280*160" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383314.jpg">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+            <h3 class="text-white font-bold">内蒙古草原</h3>
+            <p class="text-white text-sm">辽阔草原与蒙古包</p>
+            <div class="flex items-center mt-1">
+              <i class="fa-regular fa-calendar text-[#FFB800] text-xs"></i>
+              <span class="text-white text-xs ml-1">最佳游玩：8-9月</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 主题旅行 -->
+    <div class="px-4 py-4">
+      <h2 class="text-lg font-bold mb-3">主题旅行</h2>
+      <div class="grid grid-cols-2 gap-3">
+        <div class="rounded-lg overflow-hidden shadow-sm relative">
+          <img class="w-full h-32 object-cover" alt="Mountain hiking trail with lush forest and distant peaks" data-size="160*120" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383109.jpg">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+            <div class="flex items-center">
+              <i class="fa-solid fa-mountain text-[#FFB800] mr-2"></i>
+              <h3 class="text-white font-medium">自然探索</h3>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-sm relative">
+          <img class="w-full h-32 object-cover" alt="Gourmet Chinese dishes with traditional presentation" data-size="160*120" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914384209.jpg">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+            <div class="flex items-center">
+              <i class="fa-solid fa-utensils text-[#FFB800] mr-2"></i>
+              <h3 class="text-white font-medium">美食之旅</h3>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-sm relative">
+          <img class="w-full h-32 object-cover" alt="Ancient Chinese temple with traditional architecture and artifacts" data-size="160*120" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383114.jpg">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+            <div class="flex items-center">
+              <i class="fa-solid fa-landmark text-[#FFB800] mr-2"></i>
+              <h3 class="text-white font-medium">历史文化</h3>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-sm relative">
+          <img class="w-full h-32 object-cover" alt="Modern city skyline with shopping district and pedestrians" data-size="160*120" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383105.jpg">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+            <div class="flex items-center">
+              <i class="fa-solid fa-city text-[#FFB800] mr-2"></i>
+              <h3 class="text-white font-medium">城市漫步</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 旅行灵感墙 -->
+    <div class="px-4 py-4">
+      <h2 class="text-lg font-bold mb-3">旅行灵感</h2>
+      <div class="grid grid-cols-2 gap-3">
+        <div class="mb-4">
+          <div class="rounded-lg overflow-hidden shadow-sm">
+            <img class="w-full h-48 object-cover" alt="Sunset over Great Wall of China with dramatic sky" data-size="160*200" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383127.jpg">
+            <div class="p-2">
+              <p class="text-sm">长城日落，壮美如画</p>
+              <div class="flex items-center mt-1">
+                <i class="fa-solid fa-heart text-red-500 text-xs"></i>
+                <span class="text-gray-500 text-xs ml-1">328</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 mb-2">
+          <div class="rounded-lg overflow-hidden shadow-sm">
+            <img class="w-full h-36 object-cover" alt="Traditional Chinese tea ceremony with ceramic teapot and cups" data-size="160*150" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383114.jpg">
+            <div class="p-2">
+              <p class="text-sm">品一杯清茶，感受东方韵味</p>
+              <div class="flex items-center mt-1">
+                <i class="fa-solid fa-heart text-red-500 text-xs"></i>
+                <span class="text-gray-500 text-xs ml-1">156</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-2">
+          <div class="rounded-lg overflow-hidden shadow-sm">
+            <img class="w-full h-40 object-cover" alt="Zhangjiajie stone pillars with morning mist and sunlight" data-size="160*170" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383130.jpg">
+            <div class="p-2">
+              <p class="text-sm">张家界云海，宛如仙境</p>
+              <div class="flex items-center mt-1">
+                <i class="fa-solid fa-heart text-red-500 text-xs"></i>
+                <span class="text-gray-500 text-xs ml-1">287</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="rounded-lg overflow-hidden shadow-sm">
+            <img class="w-full h-44 object-cover" alt="Colorful street food market with various Chinese delicacies" data-size="160*180" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383119.jpg">
+            <div class="p-2">
+              <p class="text-sm">夜市美食，寻味中国</p>
+              <div class="flex items-center mt-1">
+                <i class="fa-solid fa-heart text-red-500 text-xs"></i>
+                <span class="text-gray-500 text-xs ml-1">215</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部导航栏 -->
+  <div class="fixed bottom-0 left-0 right-0 bg-white border-t flex justify-around items-center py-2 z-10">
+    <div class="flex flex-col items-center">
+      <i class="fa-solid fa-house text-[#FFB800] text-xl"></i>
+      <span class="text-xs text-[#FFB800] mt-1">首页</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fa-solid fa-map-location-dot text-gray-400 text-xl"></i>
+      <span class="text-xs text-gray-400 mt-1">目的地</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <div class="bg-[#FFB800] rounded-full w-12 h-12 flex items-center justify-center -mt-4">
+        <i class="fa-solid fa-plus text-white text-xl"></i>
+      </div>
+      <span class="text-xs text-gray-400 mt-1">发布</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fa-solid fa-store text-gray-400 text-xl"></i>
+      <span class="text-xs text-gray-400 mt-1">商城</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fa-solid fa-user text-gray-400 text-xl"></i>
+      <span class="text-xs text-gray-400 mt-1">我的</span>
+    </div>
+  </div>
+</div>
+
+<style>
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+</style>
+</body>
+</html>

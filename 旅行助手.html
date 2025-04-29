@@ -1,0 +1,304 @@
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script src="https://unpkg.com/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"></script>
+  <style>* {font-family: Noto Sans SC;}</style>
+</head>
+<body>
+  <div class="bg-white min-h-screen relative pb-16">
+  <div class="fixed top-0 left-0 right-0 bg-white z-10 px-4 py-3 flex items-center justify-between shadow-sm">
+    <button class="flex items-center">
+      <i class="fa-solid fa-arrow-left text-gray-700 text-lg"></i>
+    </button>
+    <h1 class="text-lg font-bold">旅行助手</h1>
+    <button>
+      <i class="fa-solid fa-gear text-gray-700 text-lg"></i>
+    </button>
+  </div>
+  
+  <div class="pt-16 px-4">
+    <div class="rounded-lg overflow-hidden shadow-sm mb-6">
+      <div class="relative">
+        <img class="w-full h-40 object-cover" alt="scenic view of kyoto with traditional temples and autumn foliage" data-size="360*160" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914683757.jpg">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+          <h2 class="text-white font-bold text-xl">京都之旅</h2>
+          <div class="flex items-center justify-between mt-1">
+            <div class="flex items-center">
+              <i class="fa-regular fa-calendar text-[#FFB800] text-sm mr-1"></i>
+              <span class="text-white text-sm">2023年10月15日 - 10月20日</span>
+            </div>
+            <div class="bg-[#FFB800] rounded-full px-3 py-1">
+              <span class="text-white text-xs font-medium">还有12天</span>
+            </div>
+          </div>
+        </div>
+        <button class="absolute top-3 right-3 bg-white/30 backdrop-blur-sm rounded-full w-8 h-8 flex items-center justify-center">
+          <i class="fa-solid fa-pen-to-square text-white"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="font-bold">京都天气</h3>
+        <span class="text-sm text-gray-500">更新于 10:30</span>
+      </div>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <i class="fa-solid fa-cloud-sun text-[#FFB800] text-3xl"></i>
+          <div class="ml-3">
+            <span class="text-2xl font-bold">23°C</span>
+            <p class="text-sm text-gray-600">多云转晴</p>
+          </div>
+        </div>
+        <div class="text-right">
+          <p class="text-sm text-gray-600">湿度: 65%</p>
+          <p class="text-sm text-[#FFB800] font-medium">建议穿着: 长袖衬衫</p>
+        </div>
+      </div>
+      <div class="flex justify-between mt-4 pt-3 border-t border-gray-100">
+        <div class="text-center">
+          <p class="text-xs text-gray-500">明天</p>
+          <i class="fa-solid fa-sun text-[#FFB800] text-lg my-1"></i>
+          <p class="text-sm">25°C</p>
+        </div>
+        <div class="text-center">
+          <p class="text-xs text-gray-500">后天</p>
+          <i class="fa-solid fa-cloud-rain text-gray-400 text-lg my-1"></i>
+          <p class="text-sm">20°C</p>
+        </div>
+        <div class="text-center">
+          <p class="text-xs text-gray-500">周四</p>
+          <i class="fa-solid fa-cloud text-gray-400 text-lg my-1"></i>
+          <p class="text-sm">22°C</p>
+        </div>
+        <div class="text-center">
+          <p class="text-xs text-gray-500">周五</p>
+          <i class="fa-solid fa-sun text-[#FFB800] text-lg my-1"></i>
+          <p class="text-sm">24°C</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
+      <h3 class="font-bold mb-3">今日行程</h3>
+      <div class="relative pl-6 border-l-2 border-dashed border-gray-200">
+        <div class="mb-4 relative">
+          <div class="absolute -left-[25px] w-6 h-6 rounded-full bg-[#FFB800] flex items-center justify-center">
+            <i class="fa-solid fa-utensils text-white text-xs"></i>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-3">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-medium">早餐 @ 酒店餐厅</h4>
+                <p class="text-xs text-gray-500 mt-1">日式早餐，含传统和洋式选择</p>
+              </div>
+              <span class="text-xs text-gray-400">07:30</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mb-4 relative">
+          <div class="absolute -left-[25px] w-6 h-6 rounded-full bg-[#FFB800] flex items-center justify-center">
+            <i class="fa-solid fa-torii-gate text-white text-xs"></i>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-3">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-medium">参观伏见稻荷大社</h4>
+                <p class="text-xs text-gray-500 mt-1">著名的千本鸟居，建议从后山路线下山</p>
+              </div>
+              <span class="text-xs text-gray-400">09:00</span>
+            </div>
+            <div class="flex items-center mt-2">
+              <i class="fa-solid fa-location-dot text-[#FFB800] text-xs"></i>
+              <span class="text-xs text-gray-600 ml-1">京都市伏见区深草薮之内町68</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mb-4 relative">
+          <div class="absolute -left-[25px] w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center">
+            <i class="fa-solid fa-utensils text-white text-xs"></i>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-3 opacity-60">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-medium">午餐 @ 稻荷寿司</h4>
+                <p class="text-xs text-gray-500 mt-1">品尝当地特色稻荷寿司</p>
+              </div>
+              <span class="text-xs text-gray-400">12:30</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mb-4 relative">
+          <div class="absolute -left-[25px] w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center">
+            <i class="fa-solid fa-tree text-white text-xs"></i>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-3 opacity-60">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-medium">岚山竹林小径</h4>
+                <p class="text-xs text-gray-500 mt-1">漫步竹林，参观天龙寺</p>
+              </div>
+              <span class="text-xs text-gray-400">14:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
+      <h3 class="font-bold mb-3">实用工具</h3>
+      <div class="grid grid-cols-4 gap-3">
+        <div class="flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-[#FFB800]/10 flex items-center justify-center mb-1">
+            <i class="fa-solid fa-yen-sign text-[#FFB800]"></i>
+          </div>
+          <span class="text-xs">货币换算</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-[#FFB800]/10 flex items-center justify-center mb-1">
+            <i class="fa-solid fa-language text-[#FFB800]"></i>
+          </div>
+          <span class="text-xs">翻译助手</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-[#FFB800]/10 flex items-center justify-center mb-1">
+            <i class="fa-solid fa-phone-volume text-[#FFB800]"></i>
+          </div>
+          <span class="text-xs">紧急电话</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-[#FFB800]/10 flex items-center justify-center mb-1">
+            <i class="fa-solid fa-train text-[#FFB800]"></i>
+          </div>
+          <span class="text-xs">交通查询</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-[#FFB800]/10 flex items-center justify-center mb-1">
+            <i class="fa-solid fa-utensils text-[#FFB800]"></i>
+          </div>
+          <span class="text-xs">餐厅预订</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-[#FFB800]/10 flex items-center justify-center mb-1">
+            <i class="fa-solid fa-cloud-sun text-[#FFB800]"></i>
+          </div>
+          <span class="text-xs">天气预报</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-[#FFB800]/10 flex items-center justify-center mb-1">
+            <i class="fa-solid fa-map-location-dot text-[#FFB800]"></i>
+          </div>
+          <span class="text-xs">地图导航</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-[#FFB800]/10 flex items-center justify-center mb-1">
+            <i class="fa-solid fa-ellipsis text-[#FFB800]"></i>
+          </div>
+          <span class="text-xs">更多</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bg-white rounded-lg shadow-sm mb-6">
+      <div class="p-4 border-b border-gray-100">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <i class="fa-solid fa-car text-[#FFB800] mr-2"></i>
+            <h3 class="font-bold">交通出行</h3>
+          </div>
+          <i class="fa-solid fa-chevron-down text-gray-400"></i>
+        </div>
+      </div>
+      <div class="p-4">
+        <ul class="space-y-2">
+          <li class="flex items-start">
+            <i class="fa-solid fa-circle-info text-[#FFB800] text-xs mt-1 mr-2"></i>
+            <p class="text-sm text-gray-700">京都市内推荐使用巴士一日券（¥600），覆盖大部分景点</p>
+          </li>
+          <li class="flex items-start">
+            <i class="fa-solid fa-circle-info text-[#FFB800] text-xs mt-1 mr-2"></i>
+            <p class="text-sm text-gray-700">从关西机场到京都站可乘坐特急列车"HARUKA"（约75分钟）</p>
+          </li>
+          <li class="flex items-start">
+            <i class="fa-solid fa-circle-info text-[#FFB800] text-xs mt-1 mr-2"></i>
+            <p class="text-sm text-gray-700">出租车起步价¥640，市内短途约¥1000-2000</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="bg-white rounded-lg shadow-sm mb-6">
+      <div class="p-4 border-b border-gray-100">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <i class="fa-solid fa-utensils text-[#FFB800] mr-2"></i>
+            <h3 class="font-bold">饮食提示</h3>
+          </div>
+          <i class="fa-solid fa-chevron-right text-gray-400"></i>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bg-white rounded-lg shadow-sm mb-6">
+      <div class="p-4 border-b border-gray-100">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <i class="fa-solid fa-shield-halved text-[#FFB800] mr-2"></i>
+            <h3 class="font-bold">安全须知</h3>
+          </div>
+          <i class="fa-solid fa-chevron-right text-gray-400"></i>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bg-white rounded-lg shadow-sm mb-6">
+      <div class="p-4 border-b border-gray-100">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <i class="fa-solid fa-hands-praying text-[#FFB800] mr-2"></i>
+            <h3 class="font-bold">文化礼仪</h3>
+          </div>
+          <i class="fa-solid fa-chevron-right text-gray-400"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="fixed bottom-16 right-4">
+    <button class="w-14 h-14 rounded-full bg-gradient-to-r from-[#FFB800] to-[#FF9500] flex items-center justify-center shadow-lg">
+      <i class="fa-solid fa-robot text-white text-2xl"></i>
+    </button>
+  </div>
+  
+  <div class="fixed bottom-0 left-0 right-0 bg-white border-t flex justify-around items-center py-2 z-10">
+    <div class="flex flex-col items-center">
+      <i class="fa-solid fa-house text-gray-400 text-xl"></i>
+      <span class="text-xs text-gray-400 mt-1">首页</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fa-solid fa-map-location-dot text-gray-400 text-xl"></i>
+      <span class="text-xs text-gray-400 mt-1">目的地</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fa-solid fa-plus text-gray-400 text-xl"></i>
+      <span class="text-xs text-gray-400 mt-1">发布</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fa-solid fa-compass text-[#FFB800] text-xl"></i>
+      <span class="text-xs text-[#FFB800] mt-1">助手</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fa-solid fa-user text-gray-400 text-xl"></i>
+      <span class="text-xs text-gray-400 mt-1">我的</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

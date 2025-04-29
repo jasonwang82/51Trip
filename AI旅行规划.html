@@ -1,0 +1,310 @@
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script src="https://unpkg.com/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"></script>
+  <style>* {font-family: Noto Sans SC;}</style>
+</head>
+<body>
+  <div class="bg-white min-h-screen relative pb-16">
+  <div class="fixed top-0 left-0 right-0 bg-white z-10 px-4 py-3 flex items-center justify-between shadow-sm">
+    <button class="flex items-center">
+      <i class="fa-solid fa-arrow-left text-gray-700 text-lg"></i>
+    </button>
+    <h1 class="text-lg font-bold">AI旅行规划</h1>
+    <button>
+      <i class="fa-solid fa-share-nodes text-gray-700 text-lg"></i>
+    </button>
+  </div>
+  
+  <div class="pt-16 px-4">
+    <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-4 shadow-sm mb-6">
+      <div class="flex items-center">
+        <div class="w-12 h-12 bg-[#FFB800] rounded-full flex items-center justify-center">
+          <i class="fa-solid fa-robot text-white text-xl"></i>
+        </div>
+        <div class="ml-3">
+          <h3 class="font-bold text-gray-800">旅行智慧助手</h3>
+          <p class="text-xs text-gray-600">由AI驱动，为您定制完美旅行计划</p>
+        </div>
+      </div>
+      <p class="text-sm mt-3 text-gray-700">告诉我您的旅行偏好，我将为您规划最适合的行程，包括景点、美食、住宿和交通建议。</p>
+      <button class="w-full bg-[#FFB800] text-white py-3 rounded-lg font-medium mt-4 shadow-sm">开始规划</button>
+    </div>
+    
+    <div class="mb-6">
+      <h2 class="text-lg font-bold mb-3">设置您的旅行偏好</h2>
+      <div class="space-y-3">
+        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+          <div class="flex justify-between items-center">
+            <div class="flex items-center">
+              <i class="fa-regular fa-calendar text-[#FFB800] mr-2"></i>
+              <span class="font-medium">出行天数</span>
+            </div>
+            <i class="fa-solid fa-chevron-right text-gray-400"></i>
+          </div>
+          <div class="mt-3">
+            <input type="range" min="1" max="14" value="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#FFB800]">
+            <div class="flex justify-between mt-1">
+              <span class="text-xs text-gray-500">1天</span>
+              <span class="text-xs font-medium text-[#FFB800]">5天</span>
+              <span class="text-xs text-gray-500">14天</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+          <div class="flex justify-between items-center">
+            <div class="flex items-center">
+              <i class="fa-solid fa-wallet text-[#FFB800] mr-2"></i>
+              <span class="font-medium">预算范围</span>
+            </div>
+            <i class="fa-solid fa-chevron-right text-gray-400"></i>
+          </div>
+          <div class="mt-3">
+            <div class="flex justify-between">
+              <span class="text-sm">人均预算</span>
+              <span class="text-sm font-medium text-[#FFB800]">¥5,000-¥10,000</span>
+            </div>
+            <input type="range" min="1000" max="50000" value="7500" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#FFB800] mt-2">
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+          <div class="flex justify-between items-center">
+            <div class="flex items-center">
+              <i class="fa-solid fa-heart text-[#FFB800] mr-2"></i>
+              <span class="font-medium">旅行风格</span>
+            </div>
+            <i class="fa-solid fa-chevron-right text-gray-400"></i>
+          </div>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 bg-[#FFB800] text-white rounded-full text-sm">休闲度假</span>
+            <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm">文化探索</span>
+            <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm">美食之旅</span>
+            <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm">自然探险</span>
+            <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm">购物体验</span>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+          <div class="flex justify-between items-center">
+            <div class="flex items-center">
+              <i class="fa-solid fa-star text-[#FFB800] mr-2"></i>
+              <span class="font-medium">特殊需求</span>
+            </div>
+            <i class="fa-solid fa-chevron-right text-gray-400"></i>
+          </div>
+          <div class="mt-3 space-y-2">
+            <div class="flex items-center">
+              <input type="checkbox" id="child" class="w-4 h-4 accent-[#FFB800]">
+              <label for="child" class="ml-2 text-sm">携带儿童</label>
+            </div>
+            <div class="flex items-center">
+              <input type="checkbox" id="elderly" class="w-4 h-4 accent-[#FFB800]">
+              <label for="elderly" class="ml-2 text-sm">老人友好</label>
+            </div>
+            <div class="flex items-center">
+              <input type="checkbox" id="accessibility" class="w-4 h-4 accent-[#FFB800]">
+              <label for="accessibility" class="ml-2 text-sm">无障碍设施</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mb-6">
+      <h2 class="text-lg font-bold mb-3">想去哪里旅行？</h2>
+      <div class="relative">
+        <input type="text" placeholder="输入目的地，如：东京、巴黎、纽约..." class="w-full py-3 px-4 bg-white border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#FFB800] focus:border-transparent">
+        <i class="fa-solid fa-location-dot absolute right-4 top-3.5 text-[#FFB800]"></i>
+      </div>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <button class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm flex items-center">
+          <i class="fa-solid fa-fire-flame-curved text-[#FFB800] text-xs mr-1"></i>
+          东京
+        </button>
+        <button class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm flex items-center">
+          <i class="fa-solid fa-fire-flame-curved text-[#FFB800] text-xs mr-1"></i>
+          巴黎
+        </button>
+        <button class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm flex items-center">
+          <i class="fa-solid fa-fire-flame-curved text-[#FFB800] text-xs mr-1"></i>
+          纽约
+        </button>
+        <button class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm flex items-center">
+          <i class="fa-solid fa-fire-flame-curved text-[#FFB800] text-xs mr-1"></i>
+          京都
+        </button>
+        <button class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm flex items-center">
+          <i class="fa-solid fa-fire-flame-curved text-[#FFB800] text-xs mr-1"></i>
+          巴厘岛
+        </button>
+      </div>
+    </div>
+    
+    <div class="mb-6">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="text-lg font-bold">AI生成方案</h2>
+        <span class="text-xs text-[#FFB800]">京都 · 5天4晚</span>
+      </div>
+      
+      <div class="space-y-4">
+        <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+          <div class="bg-[#FFB800] px-4 py-2 flex items-center">
+            <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center text-[#FFB800] font-bold text-sm">1</span>
+            <span class="text-white font-medium ml-2">第一天</span>
+          </div>
+          <div class="p-4">
+            <div class="flex items-start mb-3">
+              <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-mountain text-blue-500 text-sm"></i>
+              </div>
+              <div class="ml-3">
+                <h4 class="font-medium">清水寺 &amp; 祇园地区</h4>
+                <p class="text-sm text-gray-600 mt-1">上午参观京都标志性古寺，下午漫步祇园感受传统氛围，有机会邂逅艺伎。</p>
+                <div class="flex items-center mt-1 text-xs text-gray-500">
+                  <i class="fa-regular fa-clock mr-1"></i>
+                  <span>建议游览: 09:00-17:00</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex items-start mb-3">
+              <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-utensils text-red-500 text-sm"></i>
+              </div>
+              <div class="ml-3">
+                <h4 class="font-medium">午餐: 清水坂豆腐料理</h4>
+                <p class="text-sm text-gray-600 mt-1">品尝京都特色豆腐料理，清淡可口，展现日本料理的精致。</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-bed text-purple-500 text-sm"></i>
+              </div>
+              <div class="ml-3">
+                <h4 class="font-medium">住宿: 京都四季酒店</h4>
+                <p class="text-sm text-gray-600 mt-1">位于市中心的豪华酒店，融合现代设计与日本传统元素。</p>
+                <div class="mt-1">
+                  <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded">AI推荐</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="w-full py-2 text-sm text-[#FFB800] border-t border-gray-100">查看详情</button>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+          <div class="bg-[#FFB800] px-4 py-2 flex items-center">
+            <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center text-[#FFB800] font-bold text-sm">2</span>
+            <span class="text-white font-medium ml-2">第二天</span>
+          </div>
+          <div class="p-4">
+            <div class="flex items-start mb-3">
+              <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-torii-gate text-blue-500 text-sm"></i>
+              </div>
+              <div class="ml-3">
+                <h4 class="font-medium">伏见稻荷大社 &amp; 千本鸟居</h4>
+                <p class="text-sm text-gray-600 mt-1">探访著名的千本鸟居，感受日本神道教文化的魅力。</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-tree text-green-500 text-sm"></i>
+              </div>
+              <div class="ml-3">
+                <h4 class="font-medium">竹林小径 &amp; 岚山</h4>
+                <p class="text-sm text-gray-600 mt-1">漫步于宁静的竹林，欣赏岚山的自然风光。</p>
+              </div>
+            </div>
+          </div>
+          <button class="w-full py-2 text-sm text-[#FFB800] border-t border-gray-100">查看详情</button>
+        </div>
+      </div>
+      
+      <button class="w-full bg-white border border-gray-200 rounded-lg py-3 text-gray-500 mt-3 flex items-center justify-center">
+        <i class="fa-solid fa-ellipsis text-gray-400 mr-1"></i>
+        查看更多天数
+      </button>
+    </div>
+    
+    <div class="mb-6">
+      <h2 class="text-lg font-bold mb-3">个性化建议</h2>
+      <div class="space-y-3">
+        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+          <div class="flex items-start">
+            <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-lightbulb text-[#FFB800]"></i>
+            </div>
+            <div class="ml-3">
+              <h4 class="font-medium">当地美食推荐</h4>
+              <p class="text-sm text-gray-600 mt-1">不要错过京都的抹茶甜点、怀石料理和米其林餐厅"菊乃井"的传统京都料理。</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+          <div class="flex items-start">
+            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-camera text-blue-500"></i>
+            </div>
+            <div class="ml-3">
+              <h4 class="font-medium">最佳拍照点</h4>
+              <p class="text-sm text-gray-600 mt-1">清水寺的木质平台、伏见稻荷大社的千本鸟居和岚山竹林是京都最上镜的地点。</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+          <div class="flex items-start">
+            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-train text-green-500"></i>
+            </div>
+            <div class="ml-3">
+              <h4 class="font-medium">交通提示</h4>
+              <p class="text-sm text-gray-600 mt-1">建议购买京都巴士一日券，覆盖大部分景点。或租借自行车，体验当地人的生活方式。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="flex gap-3 mb-8">
+      <button class="flex-1 py-3 border border-[#FFB800] text-[#FFB800] rounded-lg font-medium">重新生成</button>
+      <button class="flex-1 py-3 bg-[#FFB800] text-white rounded-lg font-medium">保存方案</button>
+    </div>
+  </div>
+  
+  <div class="fixed bottom-0 left-0 right-0 bg-white border-t flex justify-around items-center py-2 z-10">
+    <div class="flex flex-col items-center">
+      <i class="fa-solid fa-house text-gray-400 text-xl"></i>
+      <span class="text-xs text-gray-400 mt-1">首页</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fa-solid fa-map-location-dot text-gray-400 text-xl"></i>
+      <span class="text-xs text-gray-400 mt-1">目的地</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <div class="bg-[#FFB800] rounded-full w-12 h-12 flex items-center justify-center -mt-4">
+        <i class="fa-solid fa-route text-white text-xl"></i>
+      </div>
+      <span class="text-xs text-[#FFB800] mt-1">规划</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fa-solid fa-store text-gray-400 text-xl"></i>
+      <span class="text-xs text-gray-400 mt-1">商城</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fa-solid fa-user text-gray-400 text-xl"></i>
+      <span class="text-xs text-gray-400 mt-1">我的</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

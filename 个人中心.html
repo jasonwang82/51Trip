@@ -1,0 +1,293 @@
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script src="https://unpkg.com/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"></script>
+  <style>* {font-family: Noto Sans SC;}</style>
+</head>
+<body>
+  <div class="bg-white min-h-screen relative pb-16">
+  <div class="bg-gradient-to-r from-[#FFB800] to-[#FFA500] pt-10 pb-6 px-4 relative">
+    <div class="flex items-center justify-between mb-4">
+      <button class="w-8 h-8 flex items-center justify-center bg-white/20 backdrop-blur-sm rounded-full">
+        <i class="fa-solid fa-arrow-left text-white"></i>
+      </button>
+      <button class="w-8 h-8 flex items-center justify-center bg-white/20 backdrop-blur-sm rounded-full">
+        <i class="fa-solid fa-gear text-white"></i>
+      </button>
+    </div>
+    <div class="flex items-center">
+      <div class="relative">
+        <img class="w-20 h-20 rounded-full object-cover border-4 border-white" data-size="80*80" alt="profile photo of Asian woman smiling with travel background" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914782975.jpg">
+        <div class="absolute bottom-0 right-0 bg-[#FFB800] rounded-full w-6 h-6 flex items-center justify-center border-2 border-white">
+          <i class="fa-solid fa-camera text-white text-xs"></i>
+        </div>
+      </div>
+      <div class="ml-4">
+        <h1 class="text-white text-xl font-bold">旅行者小林</h1>
+        <div class="flex items-center mt-1">
+          <span class="bg-white/30 text-white text-xs px-2 py-0.5 rounded-full">黄金会员</span>
+        </div>
+        <p class="text-white/80 text-sm mt-2">热爱探索世界的每一个角落</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="px-4 py-5 bg-white -mt-4 rounded-t-3xl shadow-sm">
+    <div class="flex justify-between items-center mb-6">
+      <div class="text-center flex-1">
+        <p class="text-2xl font-bold text-gray-800">12</p>
+        <p class="text-xs text-gray-500 mt-1">已去过的城市</p>
+      </div>
+      <div class="h-10 w-px bg-gray-200"></div>
+      <div class="text-center flex-1">
+        <p class="text-2xl font-bold text-[#FFB800]">86</p>
+        <p class="text-xs text-gray-500 mt-1">旅行总天数</p>
+      </div>
+      <div class="h-10 w-px bg-gray-200"></div>
+      <div class="text-center flex-1">
+        <p class="text-2xl font-bold text-gray-800">24</p>
+        <p class="text-xs text-gray-500 mt-1">收藏的攻略</p>
+      </div>
+    </div>
+    
+    <div class="mb-6">
+      <div class="flex justify-between items-center mb-3">
+        <h2 class="text-lg font-bold">我的行程</h2>
+        <a href="#" class="text-sm text-gray-500">查看全部</a>
+      </div>
+      <div class="overflow-x-auto flex gap-4 no-scrollbar pb-2">
+        <div class="bg-white rounded-lg shadow-sm border border-gray-100 min-w-[220px]">
+          <div class="relative">
+            <img class="w-full h-32 object-cover rounded-t-lg" data-size="220*130" alt="kyoto traditional temple with autumn red maple leaves" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914783096.jpg">
+            <div class="absolute top-2 right-2 bg-[#FFB800] rounded-full px-2 py-0.5">
+              <span class="text-white text-xs font-medium">即将出发</span>
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="font-bold">京都之旅</h3>
+            <div class="flex items-center mt-1">
+              <i class="fa-regular fa-calendar text-gray-400 text-xs"></i>
+              <span class="text-gray-600 text-xs ml-1">10月15日-10月20日</span>
+            </div>
+            <div class="flex items-center justify-between mt-2">
+              <span class="text-xs bg-yellow-50 text-[#FFB800] px-2 py-0.5 rounded">还有12天</span>
+              <button class="text-[#FFB800] text-sm">查看</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-sm border border-gray-100 min-w-[220px]">
+          <div class="relative">
+            <img class="w-full h-32 object-cover rounded-t-lg" data-size="220*130" alt="bali beach with palm trees and sunset view" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914783995.jpg">
+            <div class="absolute top-2 right-2 bg-gray-500 rounded-full px-2 py-0.5">
+              <span class="text-white text-xs font-medium">已完成</span>
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="font-bold">巴厘岛度假</h3>
+            <div class="flex items-center mt-1">
+              <i class="fa-regular fa-calendar text-gray-400 text-xs"></i>
+              <span class="text-gray-600 text-xs ml-1">7月8日-7月15日</span>
+            </div>
+            <div class="flex items-center justify-between mt-2">
+              <span class="text-xs bg-gray-50 text-gray-500 px-2 py-0.5 rounded">已结束</span>
+              <button class="text-[#FFB800] text-sm">回顾</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-sm border border-gray-100 min-w-[220px]">
+          <div class="relative">
+            <img class="w-full h-32 object-cover rounded-t-lg" data-size="220*130" alt="paris eiffel tower with spring blossoms" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914784020.jpg">
+            <div class="absolute top-2 right-2 bg-gray-500 rounded-full px-2 py-0.5">
+              <span class="text-white text-xs font-medium">已完成</span>
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="font-bold">巴黎春日行</h3>
+            <div class="flex items-center mt-1">
+              <i class="fa-regular fa-calendar text-gray-400 text-xs"></i>
+              <span class="text-gray-600 text-xs ml-1">4月5日-4月12日</span>
+            </div>
+            <div class="flex items-center justify-between mt-2">
+              <span class="text-xs bg-gray-50 text-gray-500 px-2 py-0.5 rounded">已结束</span>
+              <button class="text-[#FFB800] text-sm">回顾</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mb-6">
+      <div class="flex justify-between items-center mb-3">
+        <h2 class="text-lg font-bold">我的收藏</h2>
+        <a href="#" class="text-sm text-gray-500">查看全部</a>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+          <img class="w-full h-24 object-cover" data-size="160*100" alt="japanese temple with cherry blossoms and traditional architecture" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914782976.jpg">
+          <div class="p-2">
+            <h3 class="text-sm font-medium">京都赏樱一日游</h3>
+            <p class="text-xs text-gray-500 mt-1">收藏于 09-15</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+          <img class="w-full h-24 object-cover" data-size="160*100" alt="thai street food market with colorful dishes and vendors" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914782990.jpg">
+          <div class="p-2">
+            <h3 class="text-sm font-medium">曼谷美食攻略</h3>
+            <p class="text-xs text-gray-500 mt-1">收藏于 08-23</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+          <img class="w-full h-24 object-cover" data-size="160*100" alt="luxury hotel room with ocean view and modern design" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914782973.jpg">
+          <div class="p-2">
+            <h3 class="text-sm font-medium">马尔代夫酒店推荐</h3>
+            <p class="text-xs text-gray-500 mt-1">收藏于 08-10</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+          <img class="w-full h-24 object-cover" data-size="160*100" alt="hiking trail in mountains with forest and scenic views" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914782961.jpg">
+          <div class="p-2">
+            <h3 class="text-sm font-medium">瑞士徒步路线</h3>
+            <p class="text-xs text-gray-500 mt-1">收藏于 07-28</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mb-6">
+      <h2 class="text-lg font-bold mb-3">旅行足迹地图</h2>
+      <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+        <div class="relative">
+          <img class="w-full h-48 object-cover" data-size="360*200" alt="world map with pins marking visited locations in different countries" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914784082.jpg">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-white font-medium">已探索</p>
+                <p class="text-white text-sm">8个国家/地区</p>
+              </div>
+              <button class="bg-white/30 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">
+                查看详情
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mb-6">
+      <h2 class="text-lg font-bold mb-3">我的订单</h2>
+      <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+        <div class="flex border-b border-gray-100">
+          <button class="flex-1 py-2.5 text-center text-[#FFB800] border-b-2 border-[#FFB800] font-medium text-sm">全部</button>
+          <button class="flex-1 py-2.5 text-center text-gray-500 text-sm">待支付</button>
+          <button class="flex-1 py-2.5 text-center text-gray-500 text-sm">待出行</button>
+          <button class="flex-1 py-2.5 text-center text-gray-500 text-sm">待评价</button>
+        </div>
+        
+        <div class="p-3 border-b border-gray-100">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="font-medium">京都四季酒店</h3>
+              <p class="text-xs text-gray-500 mt-1">10月15日-10月20日 · 高级大床房</p>
+            </div>
+            <span class="text-[#FFB800] text-sm font-medium">待支付</span>
+          </div>
+          <div class="flex justify-between items-center mt-3">
+            <p class="text-sm text-gray-800">¥6,800</p>
+            <div class="flex gap-2">
+              <button class="px-3 py-1 border border-gray-300 rounded text-sm text-gray-600">取消</button>
+              <button class="px-3 py-1 bg-[#FFB800] rounded text-sm text-white">支付</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="p-3">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="font-medium">东京-京都新干线</h3>
+              <p class="text-xs text-gray-500 mt-1">10月15日 · 10:30 · 2张票</p>
+            </div>
+            <span class="text-green-600 text-sm font-medium">已出票</span>
+          </div>
+          <div class="flex justify-between items-center mt-3">
+            <p class="text-sm text-gray-800">¥1,560</p>
+            <button class="px-3 py-1 border border-[#FFB800] rounded text-sm text-[#FFB800]">查看详情</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mb-6">
+      <h2 class="text-lg font-bold mb-3">会员权益</h2>
+      <div class="bg-gradient-to-r from-[#FFB800]/10 to-[#FFA500]/10 rounded-lg p-4">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center">
+            <i class="fa-solid fa-crown text-[#FFB800] text-lg"></i>
+            <span class="ml-2 font-bold">黄金会员</span>
+          </div>
+          <button class="text-sm text-[#FFB800]">会员详情</button>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-[#FFB800]/20 flex items-center justify-center mb-1">
+              <i class="fa-solid fa-headset text-[#FFB800]"></i>
+            </div>
+            <span class="text-xs text-center">专属客服</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-[#FFB800]/20 flex items-center justify-center mb-1">
+              <i class="fa-solid fa-calendar-check text-[#FFB800]"></i>
+            </div>
+            <span class="text-xs text-center">优先预订</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-[#FFB800]/20 flex items-center justify-center mb-1">
+              <i class="fa-solid fa-percent text-[#FFB800]"></i>
+            </div>
+            <span class="text-xs text-center">折扣特权</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="fixed bottom-0 left-0 right-0 bg-white border-t flex justify-around items-center py-2 z-10">
+    <div class="flex flex-col items-center">
+      <i class="fa-solid fa-house text-gray-400 text-xl"></i>
+      <span class="text-xs text-gray-400 mt-1">首页</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fa-solid fa-map-location-dot text-gray-400 text-xl"></i>
+      <span class="text-xs text-gray-400 mt-1">目的地</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <div class="bg-[#FFB800] rounded-full w-12 h-12 flex items-center justify-center -mt-4">
+        <i class="fa-solid fa-plus text-white text-xl"></i>
+      </div>
+      <span class="text-xs text-gray-400 mt-1">发布</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fa-solid fa-store text-gray-400 text-xl"></i>
+      <span class="text-xs text-gray-400 mt-1">商城</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fa-solid fa-user text-[#FFB800] text-xl"></i>
+      <span class="text-xs text-[#FFB800] mt-1">我的</span>
+    </div>
+  </div>
+</div>
+<style>
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+</style>
+</body>
+</html>
