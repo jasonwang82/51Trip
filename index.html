@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>51Trip - 旅行规划应用</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script src="https://unpkg.com/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"></script>
+    <style>* {font-family: Noto Sans SC;}</style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 页面标题 -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">51Trip 旅行规划应用</h1>
+            <p class="text-lg text-gray-600">智能旅行规划，让您的每一次出行都完美无缺</p>
+        </div>
+
+        <!-- 功能介绍 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white rounded-lg shadow-sm p-6 text-center">
+                <div class="w-16 h-16 bg-[#FFB800] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fa-solid fa-robot text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">AI智能规划</h3>
+                <p class="text-gray-600">基于AI技术的个性化旅行路线规划</p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-sm p-6 text-center">
+                <div class="w-16 h-16 bg-[#FFB800] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fa-solid fa-map-location-dot text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">热门目的地</h3>
+                <p class="text-gray-600">精选全球热门旅行目的地推荐</p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-sm p-6 text-center">
+                <div class="w-16 h-16 bg-[#FFB800] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fa-solid fa-compass text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">贴心助手</h3>
+                <p class="text-gray-600">提供实时天气、交通等实用信息</p>
+            </div>
+        </div>
+
+        <!-- 页面导航 -->
+        <div class="bg-white rounded-lg shadow-sm p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">应用页面导航</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- 首页 -->
+                <a href="首页.html" class="group block p-4 border border-gray-200 rounded-lg hover:border-[#FFB800] hover:shadow-md transition-all duration-200">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-[#FFB800] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-house text-white text-lg"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-gray-800 group-hover:text-[#FFB800]">首页</h3>
+                            <p class="text-sm text-gray-600">应用主页，浏览热门推荐</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 目的地 -->
+                <a href="目的地.html" class="group block p-4 border border-gray-200 rounded-lg hover:border-[#FFB800] hover:shadow-md transition-all duration-200">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-[#FFB800] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-map-location-dot text-white text-lg"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-gray-800 group-hover:text-[#FFB800]">目的地</h3>
+                            <p class="text-sm text-gray-600">探索全球热门旅游目的地</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- AI旅行规划 -->
+                <a href="AI旅行规划.html" class="group block p-4 border border-gray-200 rounded-lg hover:border-[#FFB800] hover:shadow-md transition-all duration-200">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-[#FFB800] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-route text-white text-lg"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-gray-800 group-hover:text-[#FFB800]">AI旅行规划</h3>
+                            <p class="text-sm text-gray-600">智能生成个性化旅行方案</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 旅行助手 -->
+                <a href="旅行助手.html" class="group block p-4 border border-gray-200 rounded-lg hover:border-[#FFB800] hover:shadow-md transition-all duration-200">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-[#FFB800] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-compass text-white text-lg"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-gray-800 group-hover:text-[#FFB800]">旅行助手</h3>
+                            <p class="text-sm text-gray-600">实用工具和旅行建议</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 个人中心 -->
+                <a href="个人中心.html" class="group block p-4 border border-gray-200 rounded-lg hover:border-[#FFB800] hover:shadow-md transition-all duration-200">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-[#FFB800] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-user text-white text-lg"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-gray-800 group-hover:text-[#FFB800]">个人中心</h3>
+                            <p class="text-sm text-gray-600">管理个人信息和旅行记录</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 项目信息 -->
+        <div class="text-center mt-8 p-6 bg-white rounded-lg shadow-sm">
+            <h3 class="text-lg font-bold text-gray-800 mb-2">项目信息</h3>
+            <p class="text-gray-600 mb-4">这是一个基于HTML、CSS和JavaScript的旅行规划应用原型</p>
+            <div class="flex justify-center space-x-4 text-sm text-gray-500">
+                <span><i class="fa-solid fa-code mr-1"></i>HTML5 + CSS3</span>
+                <span><i class="fa-solid fa-palette mr-1"></i>Tailwind CSS</span>
+                <span><i class="fa-solid fa-icons mr-1"></i>Font Awesome</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
