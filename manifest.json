@@ -1,0 +1,53 @@
+{
+  "name": "旅行智慧助手",
+  "short_name": "旅行助手",
+  "description": "发现全球最佳旅行目的地，获取专业旅行规划建议",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#FFB800",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "zh-CN",
+  "categories": ["travel", "lifestyle"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' fill='%23FFB800' rx='24'/%3E%3Cpath d='M96 40c-30.9 0-56 25.1-56 56s25.1 56 56 56 56-25.1 56-56-25.1-56-56-56zm0 96c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z' fill='white'/%3E%3Cpath d='M96 64c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32zm0 48c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16z' fill='white'/%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' fill='%23FFB800' rx='64'/%3E%3Cpath d='M256 106.7c-82.1 0-149.3 67.2-149.3 149.3s67.2 149.3 149.3 149.3S405.3 338.1 405.3 256 338.1 106.7 256 106.7zm0 256c-58.8 0-106.7-47.9-106.7-106.7S197.2 149.3 256 149.3 362.7 197.2 362.7 256 314.8 362.7 256 362.7z' fill='white'/%3E%3Cpath d='M256 170.7c-47.1 0-85.3 38.2-85.3 85.3s38.2 85.3 85.3 85.3 85.3-38.2 85.3-85.3-38.2-85.3-85.3-85.3zm0 128c-23.5 0-42.7-19.2-42.7-42.7s19.2-42.7 42.7-42.7 42.7 19.2 42.7 42.7-19.2 42.7-42.7 42.7z' fill='white'/%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "目的地搜索",
+      "short_name": "目的地",
+      "description": "搜索旅行目的地",
+      "url": "/目的地.html",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' fill='%23FFB800'/%3E%3Cpath d='M48 20c-15.4 0-28 12.6-28 28 0 21 28 48 28 48s28-27 28-48c0-15.4-12.6-28-28-28zm0 38c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10z' fill='white'/%3E%3C/svg%3E",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "AI旅行规划",
+      "short_name": "AI规划",
+      "description": "智能旅行规划助手",
+      "url": "/AI旅行规划.html",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' fill='%23FFB800'/%3E%3Cpath d='M48 16c-17.7 0-32 14.3-32 32v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V48c0-17.7-14.3-32-32-32zm-8 48c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm16 0c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z' fill='white'/%3E%3C/svg%3E",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

@@ -1,0 +1,58 @@
+{
+  "version": 1753805491507,
+  "files": {
+    "AI旅行规划.html": {
+      "hash": "615361ec",
+      "size": 12370,
+      "type": "document"
+    },
+    "manifest.json": {
+      "hash": "10eb16fd",
+      "size": 2966,
+      "type": "data"
+    },
+    "optimized-common.css": {
+      "hash": "c5acc86c",
+      "size": 2092,
+      "type": "stylesheet"
+    },
+    "performance-utils.js": {
+      "hash": "3ce6cb88",
+      "size": 4645,
+      "type": "script"
+    },
+    "sw.js": {
+      "hash": "13fbfd3b",
+      "size": 5031,
+      "type": "script"
+    },
+    "个人中心.html": {
+      "hash": "2e9617ec",
+      "size": 12366,
+      "type": "document"
+    },
+    "旅行助手.html": {
+      "hash": "82cb02e7",
+      "size": 10724,
+      "type": "document"
+    },
+    "目的地.html": {
+      "hash": "096899e1",
+      "size": 16517,
+      "type": "document"
+    },
+    "首页.html": {
+      "hash": "dff3e665",
+      "size": 15661,
+      "type": "document"
+    }
+  },
+  "critical": [
+    "optimized-common.css",
+    "performance-utils.js"
+  ],
+  "preload": [
+    "首页.html",
+    "目的地.html"
+  ]
+}

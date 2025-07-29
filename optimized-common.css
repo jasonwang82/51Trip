@@ -1,0 +1,164 @@
+/* Optimized Common Styles for Travel App */
+
+/* Font and Base Styles */
+* {
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Custom Scrollbar Hiding */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Brand Color Variables */
+:root {
+  --brand-primary: #FFB800;
+  --brand-primary-rgb: 255, 184, 0;
+  --text-gray-600: #6B7280;
+  --text-gray-500: #9CA3AF;
+  --text-gray-400: #9CA3AF;
+}
+
+/* Performance Optimized Image Loading */
+img {
+  loading: lazy;
+  decoding: async;
+  content-visibility: auto;
+}
+
+/* Critical above-the-fold images should not be lazy loaded */
+.critical-image {
+  loading: eager;
+}
+
+/* Optimized Card Components */
+.card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Button Optimizations */
+.btn-primary {
+  background-color: var(--brand-primary);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: rgba(var(--brand-primary-rgb), 0.9);
+}
+
+/* Performance-focused Grid Layouts */
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.city-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+/* Optimized Star Rating Component */
+.star-rating {
+  display: flex;
+  align-items: center;
+}
+
+.star-rating .star {
+  color: var(--brand-primary);
+  font-size: 0.75rem;
+}
+
+/* Fixed Navigation Optimization */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 10;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  contain: layout style paint;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  z-index: 10;
+  contain: layout style paint;
+}
+
+/* Intersection Observer for Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Critical CSS for immediate rendering */
+.content-container {
+  padding-top: 4rem;
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+/* Preload hints for better performance */
+.preload-hint::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 33%, rgba(255, 255, 255, 0.3) 50%, transparent 66%);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Responsive optimizations */
+@media (max-width: 640px) {
+  .destination-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .city-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
