@@ -1,23 +1,37 @@
-# FlashAttention2222
-This repository provides the official implementation of FlashAttention and
-FlashAttention-2 from the
-following papers.
+# 51Trip - 智能旅行规划助手
 
+51Trip 是一个现代化的中文旅行规划和探索应用，帮助用户发现全球热门目的地、规划行程并分享旅行体验。
 
-class BubbleSort {
-    static int[] bubbleSort(int[] arr) {
-        int n = arr.length;
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    // 交换 arr[j] 和 arr[j+1]
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                }
-            }
-        }
-        return arr;
-    }
-}
-# 51Trip
+## 功能特色
+
+- **目的地探索** - 浏览全球热门旅游目的地，包含详细的景点信息和用户评价
+- **AI 旅行规划** - 智能旅行助手帮助制定个性化行程
+- **旅行助手** - 提供实时旅行信息和建议
+- **用户社区** - 旅行者分享经验和故事的社交平台
+- **个人中心** - 管理个人行程、收藏和设置
+
+## 页面结构
+
+- `首页.html` - 应用主页，展示热门目的地和推荐内容
+- `目的地.html` - 目的地浏览页面，按地区分类展示景点
+- `AI旅行规划.html` - AI 驱动的智能行程规划工具
+- `旅行助手.html` - 旅行信息助手和实用工具
+- `个人中心.html` - 用户个人资料和设置管理
+
+## 技术栈
+
+- HTML5 + CSS3
+- Tailwind CSS 框架
+- Font Awesome 图标库
+- 响应式设计，支持移动端
+
+## 快速开始
+
+直接在浏览器中打开任意 HTML 文件即可查看应用界面。建议从 `首页.html` 开始浏览。
+
+## 设计特点
+
+- 现代化的移动端 UI 设计
+- 黄色 (#FFB800) 主题色调
+- 卡片式布局设计
+- 流畅的用户交互体验
