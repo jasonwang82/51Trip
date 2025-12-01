@@ -1,23 +1,38 @@
-# FlashAttention2222
-This repository provides the official implementation of FlashAttention and
-FlashAttention-2 from the
-following papers.
+# 51Trip · 智能旅行体验原型
 
+一个以移动端为主的旅行应用原型，聚焦于目的地灵感、AI 规划和在途助手等场景。所有界面采用静态 HTML + Tailwind CSS CDN 的方式构建，方便快速预览和迭代 UI。
 
-class BubbleSort {
-    static int[] bubbleSort(int[] arr) {
-        int n = arr.length;
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    // 交换 arr[j] 和 arr[j+1]
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                }
-            }
-        }
-        return arr;
-    }
-}
-# 51Trip
+## 项目概览
+- **首页（`首页.html`）**：热门目的地、主题旅行、灵感瀑布流等入口。
+- **目的地（`目的地.html`）**：多区域筛选、季节推荐、旅行者故事等模块。
+- **AI 旅行规划（`AI旅行规划.html`）**：可视化参数设置与多日行程示例。
+- **旅行助手（`旅行助手.html`）**：行前倒计时、天气、行程轴以及常用工具。
+- **个人中心（`个人中心.html`）**：行程管理、收藏、订单和会员体系。
+
+## 快速预览
+1. 确认仓库已下载到本地。
+2. 双击任意 `.html` 文件或在浏览器地址栏输入 `file:///path/to/文件名`。
+3. Tailwind 与 Font Awesome 通过 CDN 加载，需保持网络可访问对应域名。
+
+## 技术栈
+- HTML5 + Tailwind CSS（CDN 版本，含 `forms` 插件）
+- Font Awesome 6.7.2 图标（CDN）
+- Noto Sans SC 字体（系统字体族）
+
+## 目录结构
+```
+/workspace
+├── README.md                 # 当前文档
+├── AI旅行规划.html           # AI 行程规划界面
+├── 旅行助手.html             # 行程执行助手
+├── 目的地.html               # 目的地/灵感筛选
+├── 首页.html                 # App 首页
+└── 个人中心.html             # 用户中心
+```
+
+## 后续可拓展方向
+- 引入真实数据源（例如 JSON 配置或 API）以替换静态文案。
+- 衔接简单的前端路由或组件化框架，降低多页面重复。
+- 为核心交互添加可复用的 JS 逻辑（收藏、筛选、AI 生成版本等）。
+
+如需进一步了解页面间的关系与信息流，请参考 `ARCHITECTURE.md`。
