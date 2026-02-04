@@ -1,17 +1,39 @@
 
-<html>
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
-  <script src="https://unpkg.com/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"></script>
-  <style>* {font-family: Noto Sans SC;}</style>
+  <meta name="description" content="旅行智慧助手 - 发现全球最佳旅行目的地，获取专业旅行规划建议">
+  <meta name="keywords" content="旅行,旅游,攻略,目的地,AI旅行规划">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="optimized-common.css" as="style">
+  <link rel="preload" href="performance-utils.js" as="script">
+  <link rel="preconnect" href="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com">
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  
+  <!-- Critical CSS -->
+  <link rel="stylesheet" href="optimized-common.css">
+  
+  <!-- Load TailwindCSS with defer -->
+  <script defer src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  
+  <!-- Load FontAwesome with defer -->
+  <script defer src="https://unpkg.com/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"></script>
+  
+  <!-- Performance utilities -->
+  <script defer src="performance-utils.js"></script>
+  
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#FFB800">
 </head>
 <body>
   <div class="bg-white min-h-screen relative pb-16">
   <!-- 顶部搜索区 -->
-  <div class="fixed top-0 left-0 right-0 bg-white z-10 px-4 py-3 flex items-center justify-between shadow-sm">
-    <img class="h-8 w-auto" alt="Travel Wisdom Assistant logo with yellow accent" data-size="120*40" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914384154.jpg">
+  <div class="fixed-nav">
+    <img class="h-8 w-auto critical-image" alt="Travel Wisdom Assistant logo with yellow accent" width="120" height="40" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914384154.jpg">
     <div class="flex-1 mx-3 relative">
       <input type="text" placeholder="搜索目的地/攻略/酒店" class="w-full py-2 px-4 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400">
       <i class="fa-solid fa-magnifying-glass absolute right-4 top-2.5 text-gray-400"></i>
@@ -23,7 +45,7 @@
   </div>
 
   <!-- 主体内容区 -->
-  <div class="pt-16">
+  <div class="content-container">
     <!-- 热门标签滚动条 -->
     <div class="px-4 py-3 overflow-x-auto flex gap-2 no-scrollbar">
       <span class="bg-[#FFB800] text-white px-4 py-1.5 rounded-full text-sm whitespace-nowrap">热门景点</span>
@@ -65,38 +87,38 @@
         <h2 class="text-lg font-bold">热门城市</h2>
         <a href="#" class="text-sm text-gray-500">查看全部</a>
       </div>
-      <div class="grid grid-cols-3 gap-3">
-        <div class="rounded-lg overflow-hidden shadow-sm">
+      <div class="city-grid">
+        <div class="card fade-in">
           <div class="relative">
-            <img class="w-full h-24 object-cover" alt="Shanghai skyline with Oriental Pearl Tower at sunset" data-size="120*80" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383122.jpg">
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+            <img class="w-full h-24 object-cover" alt="Shanghai skyline with Oriental Pearl Tower at sunset" width="120" height="80" loading="lazy" data-src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383122.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3C/svg%3E">
+            <div class="card-overlay p-2">
               <p class="text-white text-sm font-medium">上海</p>
-              <div class="flex items-center">
-                <i class="fa-solid fa-star text-[#FFB800] text-xs"></i>
+              <div class="star-rating">
+                <i class="fa-solid fa-star star"></i>
                 <span class="text-white text-xs ml-1">4.8</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="rounded-lg overflow-hidden shadow-sm">
+        <div class="card fade-in">
           <div class="relative">
-            <img class="w-full h-24 object-cover" alt="Beijing Forbidden City with traditional Chinese architecture" data-size="120*80" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383565.jpg">
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+            <img class="w-full h-24 object-cover" alt="Beijing Forbidden City with traditional Chinese architecture" width="120" height="80" loading="lazy" data-src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383565.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3C/svg%3E">
+            <div class="card-overlay p-2">
               <p class="text-white text-sm font-medium">北京</p>
-              <div class="flex items-center">
-                <i class="fa-solid fa-star text-[#FFB800] text-xs"></i>
+              <div class="star-rating">
+                <i class="fa-solid fa-star star"></i>
                 <span class="text-white text-xs ml-1">4.9</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="rounded-lg overflow-hidden shadow-sm">
+        <div class="card fade-in">
           <div class="relative">
-            <img class="w-full h-24 object-cover" alt="Chengdu panda reserve with bamboo forest" data-size="120*80" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383121.jpg">
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
+            <img class="w-full h-24 object-cover" alt="Chengdu panda reserve with bamboo forest" width="120" height="80" loading="lazy" data-src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914383121.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3C/svg%3E">
+            <div class="card-overlay p-2">
               <p class="text-white text-sm font-medium">成都</p>
-              <div class="flex items-center">
-                <i class="fa-solid fa-star text-[#FFB800] text-xs"></i>
+              <div class="star-rating">
+                <i class="fa-solid fa-star star"></i>
                 <span class="text-white text-xs ml-1">4.7</span>
               </div>
             </div>
@@ -281,7 +303,8 @@
   </div>
 
   <!-- 底部导航栏 -->
-  <div class="fixed bottom-0 left-0 right-0 bg-white border-t flex justify-around items-center py-2 z-10">
+  <div class="bottom-nav py-2">
+    <div class="flex justify-around items-center">
     <div class="flex flex-col items-center">
       <i class="fa-solid fa-house text-[#FFB800] text-xl"></i>
       <span class="text-xs text-[#FFB800] mt-1">首页</span>
@@ -300,9 +323,10 @@
       <i class="fa-solid fa-store text-gray-400 text-xl"></i>
       <span class="text-xs text-gray-400 mt-1">商城</span>
     </div>
-    <div class="flex flex-col items-center">
-      <i class="fa-solid fa-user text-gray-400 text-xl"></i>
-      <span class="text-xs text-gray-400 mt-1">我的</span>
+          <div class="flex flex-col items-center">
+        <i class="fa-solid fa-user text-gray-400 text-xl"></i>
+        <span class="text-xs text-gray-400 mt-1">我的</span>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="探索全球热门旅行目的地，发现隐藏的旅行宝藏">
+  <title>目的地 - 旅行智慧助手</title>
+  
+  <!-- Performance optimizations -->
+  <link rel="preload" href="optimized-common.css" as="style">
+  <link rel="preload" href="performance-utils.js" as="script">
+  <link rel="preconnect" href="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="optimized-common.css">
+  <script defer src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script defer src="https://unpkg.com/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"></script>
+  <script defer src="performance-utils.js"></script>
+  
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#FFB800">
+</head>
+<body>
+  <div class="bg-white min-h-screen relative pb-16">
+    <!-- 顶部搜索区 -->
+    <div class="fixed-nav">
+      <img class="h-8 w-auto critical-image" alt="travel app logo with yellow accent" width="120" height="40" src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914496258.jpg">
+      <div class="flex-1 mx-3 relative">
+        <input type="text" placeholder="搜索目的地/攻略/酒店" class="w-full py-2 px-4 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400">
+        <i class="fa-solid fa-magnifying-glass absolute right-4 top-2.5 text-gray-400"></i>
+      </div>
+      <button class="relative">
+        <i class="fa-solid fa-bell text-gray-600 text-xl"></i>
+        <span class="absolute -top-1 -right-1 bg-red-500 rounded-full w-4 h-4 flex items-center justify-center text-white text-xs">2</span>
+      </button>
+    </div>
+
+    <!-- 主体内容区 -->
+    <div class="content-container">
+      <!-- 分类标签 -->
+      <div class="px-4 py-3 overflow-x-auto flex gap-2 no-scrollbar">
+        <span class="bg-[#FFB800] text-white px-4 py-1.5 rounded-full text-sm whitespace-nowrap">全部</span>
+        <span class="bg-gray-100 text-gray-700 px-4 py-1.5 rounded-full text-sm whitespace-nowrap">国内热门</span>
+        <span class="bg-gray-100 text-gray-700 px-4 py-1.5 rounded-full text-sm whitespace-nowrap">亚洲</span>
+        <span class="bg-gray-100 text-gray-700 px-4 py-1.5 rounded-full text-sm whitespace-nowrap">欧洲</span>
+        <span class="bg-gray-100 text-gray-700 px-4 py-1.5 rounded-full text-sm whitespace-nowrap">美洲</span>
+        <span class="bg-gray-100 text-gray-700 px-4 py-1.5 rounded-full text-sm whitespace-nowrap">大洋洲</span>
+        <span class="bg-gray-100 text-gray-700 px-4 py-1.5 rounded-full text-sm whitespace-nowrap">非洲</span>
+      </div>
+
+      <!-- 热门目的地 -->
+      <div class="px-4 py-4">
+        <div class="destination-grid">
+          <!-- 京都 - 大卡片 -->
+          <div class="col-span-2 card fade-in">
+            <div class="relative">
+              <img class="w-full h-48 object-cover" alt="aerial view of Kyoto with traditional temples and modern buildings" width="360" height="200" loading="eager" data-src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914496910.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='200'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3C/svg%3E">
+              <div class="card-overlay p-3">
+                <h3 class="text-white font-bold text-xl">京都</h3>
+                <div class="star-rating mt-1">
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star-half-stroke star"></i>
+                  <span class="text-white text-xs ml-2">4.7</span>
+                </div>
+                <p class="text-white text-sm mt-1">千年古都，传统与现代的完美融合</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 圣托里尼 -->
+          <div class="card fade-in">
+            <div class="relative">
+              <img class="w-full h-36 object-cover" alt="santorini white buildings with blue domes against ocean backdrop" width="160" height="140" loading="lazy" data-src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914496592.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='140'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3C/svg%3E">
+              <div class="card-overlay p-2">
+                <h3 class="text-white font-bold">圣托里尼</h3>
+                <div class="flex items-center">
+                  <i class="fa-solid fa-fire text-[#FFB800] text-xs"></i>
+                  <span class="text-white text-xs ml-1">热度 98%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 纽约 -->
+          <div class="card fade-in">
+            <div class="relative">
+              <img class="w-full h-36 object-cover" alt="new york city skyline with empire state building at sunset" width="160" height="140" loading="lazy" data-src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914496812.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='140'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3C/svg%3E">
+              <div class="card-overlay p-2">
+                <h3 class="text-white font-bold">纽约</h3>
+                <div class="flex items-center">
+                  <i class="fa-solid fa-fire text-[#FFB800] text-xs"></i>
+                  <span class="text-white text-xs ml-1">热度 95%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 巴厘岛 - 大卡片 -->
+          <div class="col-span-2 card fade-in">
+            <div class="relative">
+              <img class="w-full h-40 object-cover" alt="bali rice terraces with palm trees and traditional huts" width="360" height="180" loading="lazy" data-src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914496587.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='180'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3C/svg%3E">
+              <div class="card-overlay p-3">
+                <h3 class="text-white font-bold text-xl">巴厘岛</h3>
+                <div class="star-rating mt-1">
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-regular fa-star star"></i>
+                  <span class="text-white text-xs ml-2">4.2</span>
+                </div>
+                <p class="text-white text-sm mt-1">热带天堂，文化与自然的完美结合</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 详细目的地列表 -->
+        <div class="mt-2 space-y-4">
+          <!-- 巴黎 -->
+          <div class="card fade-in">
+            <img class="w-full h-48 object-cover" alt="paris eiffel tower with spring blossoms in foreground" width="360" height="200" loading="lazy" data-src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914496590.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='200'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3C/svg%3E">
+            <div class="p-3">
+              <h3 class="font-bold text-lg">巴黎</h3>
+              <div class="star-rating mt-1">
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star-half-stroke star"></i>
+                <span class="text-gray-600 text-xs ml-2">4.8</span>
+                <span class="text-gray-400 text-xs ml-3">热度 99%</span>
+              </div>
+              <p class="text-gray-600 text-sm mt-2">浪漫之都，艺术与美食的天堂，埃菲尔铁塔、卢浮宫和塞纳河的迷人景色</p>
+              <button class="btn-primary w-full mt-3">查看攻略</button>
+            </div>
+          </div>
+
+          <!-- 迪拜 -->
+          <div class="card fade-in">
+            <img class="w-full h-48 object-cover" alt="dubai skyline with burj khalifa and modern architecture at night" width="360" height="200" loading="lazy" data-src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914496615.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='200'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3C/svg%3E">
+            <div class="p-3">
+              <h3 class="font-bold text-lg">迪拜</h3>
+              <div class="star-rating mt-1">
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-regular fa-star star"></i>
+                <span class="text-gray-600 text-xs ml-2">4.3</span>
+                <span class="text-gray-400 text-xs ml-3">热度 92%</span>
+              </div>
+              <p class="text-gray-600 text-sm mt-2">沙漠奇迹，现代建筑与阿拉伯文化交融，哈利法塔、棕榈岛和奢华购物体验</p>
+              <button class="btn-primary w-full mt-3">查看攻略</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 季节推荐 -->
+      <div class="px-4 py-4">
+        <h2 class="text-lg font-bold mb-3">这个季节适合去哪里</h2>
+        <div class="overflow-x-auto flex gap-4 no-scrollbar pb-2">
+          <div class="card fade-in min-w-[200px]">
+            <div class="relative">
+              <img class="w-full h-32 object-cover" alt="hokkaido autumn landscape with colorful maple trees and mountains" width="200" height="130" loading="lazy" data-src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914496375.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='130'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3C/svg%3E">
+              <div class="card-overlay p-3">
+                <h3 class="text-white font-bold">北海道</h3>
+                <div class="flex items-center mt-1">
+                  <i class="fa-regular fa-calendar text-[#FFB800] text-xs"></i>
+                  <span class="text-white text-xs ml-1">9-10月</span>
+                </div>
+                <p class="text-white text-xs mt-1">秋季红叶，凉爽宜人</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card fade-in min-w-[200px]">
+            <div class="relative">
+              <img class="w-full h-32 object-cover" alt="maldives overwater bungalows with turquoise ocean and clear blue sky" width="200" height="130" loading="lazy" data-src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914496349.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='130'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3C/svg%3E">
+              <div class="card-overlay p-3">
+                <h3 class="text-white font-bold">马尔代夫</h3>
+                <div class="flex items-center mt-1">
+                  <i class="fa-regular fa-calendar text-[#FFB800] text-xs"></i>
+                  <span class="text-white text-xs ml-1">11-4月</span>
+                </div>
+                <p class="text-white text-xs mt-1">阳光明媚，海水清澈</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card fade-in min-w-[200px]">
+            <div class="relative">
+              <img class="w-full h-32 object-cover" alt="tuscany countryside with cypress trees and rolling hills at sunset" width="200" height="130" loading="lazy" data-src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914496374.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='130'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3C/svg%3E">
+              <div class="card-overlay p-3">
+                <h3 class="text-white font-bold">托斯卡纳</h3>
+                <div class="flex items-center mt-1">
+                  <i class="fa-regular fa-calendar text-[#FFB800] text-xs"></i>
+                  <span class="text-white text-xs ml-1">9-10月</span>
+                </div>
+                <p class="text-white text-xs mt-1">葡萄收获季，景色如画</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card fade-in min-w-[200px]">
+            <div class="relative">
+              <img class="w-full h-32 object-cover" alt="new zealand queenstown landscape with mountains and lake" width="200" height="130" loading="lazy" data-src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914496374.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='130'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3C/svg%3E">
+              <div class="card-overlay p-3">
+                <h3 class="text-white font-bold">新西兰</h3>
+                <div class="flex items-center mt-1">
+                  <i class="fa-regular fa-calendar text-[#FFB800] text-xs"></i>
+                  <span class="text-white text-xs ml-1">11-3月</span>
+                </div>
+                <p class="text-white text-xs mt-1">南半球夏季，自然风光</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 主题探索 -->
+      <div class="px-4 py-4">
+        <h2 class="text-lg font-bold mb-3">主题探索</h2>
+        <div class="overflow-x-auto flex gap-6 no-scrollbar pb-2 px-2">
+          <div class="flex flex-col items-center fade-in">
+            <div class="w-16 h-16 rounded-full bg-[#FFB800]/10 flex items-center justify-center">
+              <i class="fa-solid fa-mountain-sun text-[#FFB800] text-xl"></i>
+            </div>
+            <span class="text-sm mt-2">自然风光</span>
+          </div>
+          <div class="flex flex-col items-center fade-in">
+            <div class="w-16 h-16 rounded-full bg-[#FFB800]/10 flex items-center justify-center">
+              <i class="fa-solid fa-landmark text-[#FFB800] text-xl"></i>
+            </div>
+            <span class="text-sm mt-2">历史古迹</span>
+          </div>
+          <div class="flex flex-col items-center fade-in">
+            <div class="w-16 h-16 rounded-full bg-[#FFB800]/10 flex items-center justify-center">
+              <i class="fa-solid fa-utensils text-[#FFB800] text-xl"></i>
+            </div>
+            <span class="text-sm mt-2">美食</span>
+          </div>
+          <div class="flex flex-col items-center fade-in">
+            <div class="w-16 h-16 rounded-full bg-[#FFB800]/10 flex items-center justify-center">
+              <i class="fa-solid fa-bag-shopping text-[#FFB800] text-xl"></i>
+            </div>
+            <span class="text-sm mt-2">购物</span>
+          </div>
+          <div class="flex flex-col items-center fade-in">
+            <div class="w-16 h-16 rounded-full bg-[#FFB800]/10 flex items-center justify-center">
+              <i class="fa-solid fa-umbrella-beach text-[#FFB800] text-xl"></i>
+            </div>
+            <span class="text-sm mt-2">海滩度假</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 旅行者故事 -->
+      <div class="px-4 py-4">
+        <h2 class="text-lg font-bold mb-3">旅行者的故事</h2>
+        <div class="space-y-4">
+          <div class="card fade-in p-3">
+            <div class="flex items-center">
+              <img class="w-10 h-10 rounded-full object-cover" alt="female traveler with sunglasses and hat smiling" width="40" height="40" loading="lazy" data-src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914496295.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3C/svg%3E">
+              <div class="ml-3">
+                <h4 class="font-medium">小林探世界</h4>
+                <div class="flex items-center text-xs text-gray-500">
+                  <span>京都</span>
+                  <span class="mx-1">·</span>
+                  <span>2023年10月</span>
+                </div>
+              </div>
+            </div>
+            <p class="text-sm mt-3">秋季的京都美不胜收，红叶季节的岚山和清水寺让人流连忘返。特别推荐傍晚时分的伏见稻荷大社，游客少了很多，橙色鸟居在夕阳下格外壮观！</p>
+            <div class="flex mt-3 justify-between items-center">
+              <div class="flex items-center">
+                <i class="fa-regular fa-heart text-gray-400"></i>
+                <span class="text-xs text-gray-500 ml-1">128</span>
+                <i class="fa-regular fa-comment text-gray-400 ml-3"></i>
+                <span class="text-xs text-gray-500 ml-1">32</span>
+              </div>
+              <img class="w-16 h-16 rounded object-cover" alt="fushimi inari shrine orange torii gates at sunset" width="64" height="64" loading="lazy" data-src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914496292.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3C/svg%3E">
+            </div>
+          </div>
+
+          <div class="card fade-in p-3">
+            <div class="flex items-center">
+              <img class="w-10 h-10 rounded-full object-cover" alt="male traveler with backpack in outdoor setting" width="40" height="40" loading="lazy" data-src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914496565.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3C/svg%3E">
+              <div class="ml-3">
+                <h4 class="font-medium">背包客阿杰</h4>
+                <div class="flex items-center text-xs text-gray-500">
+                  <span>巴厘岛</span>
+                  <span class="mx-1">·</span>
+                  <span>2023年9月</span>
+                </div>
+              </div>
+            </div>
+            <p class="text-sm mt-3">巴厘岛不只有海滩！深入内陆的乌布地区，梯田、猴林和艺术村落才是真正的灵魂所在。住了一周的当地民宿，每天清晨被鸟鸣唤醒，是最治愈的体验。</p>
+            <div class="flex mt-3 justify-between items-center">
+              <div class="flex items-center">
+                <i class="fa-regular fa-heart text-gray-400"></i>
+                <span class="text-xs text-gray-500 ml-1">95</span>
+                <i class="fa-regular fa-comment text-gray-400 ml-3"></i>
+                <span class="text-xs text-gray-500 ml-1">18</span>
+              </div>
+              <img class="w-16 h-16 rounded object-cover" alt="ubud bali rice terraces with morning mist and palm trees" width="64" height="64" loading="lazy" data-src="https://design-ai-assistant-1258344699.cos.ap-guangzhou.myqcloud.com/ai-gen-image/1745914496279.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3C/svg%3E">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <div class="bottom-nav py-2">
+      <div class="flex justify-around items-center">
+        <a href="首页.html" class="flex flex-col items-center">
+          <i class="fa-solid fa-house text-gray-400 text-xl"></i>
+          <span class="text-xs text-gray-400 mt-1">首页</span>
+        </a>
+        <div class="flex flex-col items-center">
+          <i class="fa-solid fa-map-location-dot text-[#FFB800] text-xl"></i>
+          <span class="text-xs text-[#FFB800] mt-1">目的地</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="bg-[#FFB800] rounded-full w-12 h-12 flex items-center justify-center -mt-4">
+            <i class="fa-solid fa-plus text-white text-xl"></i>
+          </div>
+          <span class="text-xs text-gray-400 mt-1">发布</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <i class="fa-solid fa-store text-gray-400 text-xl"></i>
+          <span class="text-xs text-gray-400 mt-1">商城</span>
+        </div>
+        <a href="个人中心.html" class="flex flex-col items-center">
+          <i class="fa-solid fa-user text-gray-400 text-xl"></i>
+          <span class="text-xs text-gray-400 mt-1">我的</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

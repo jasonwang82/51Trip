@@ -1,0 +1,16 @@
+{
+  "buildTime": "2025-07-29T16:11:31.521Z",
+  "optimization": {
+    "totalFiles": 9,
+    "originalSize": 99430,
+    "optimizedSize": 82372,
+    "compressionRatio": 17.155787991551847,
+    "savedBytes": 17058
+  },
+  "recommendations": [
+    "考虑启用gzip或brotli压缩以进一步减少文件大小",
+    "部署到CDN以提高全球访问速度",
+    "配置HTTP缓存头以优化重复访问性能",
+    "定期运行Lighthouse审计监控性能指标"
+  ]
+}
